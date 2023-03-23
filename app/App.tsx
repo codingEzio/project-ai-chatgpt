@@ -29,12 +29,14 @@ export default function App({
   const [maxTokens, setMaxTokens] = useState("2048");
   const [direction, setDirection] = useState(
   defaultDirection ? defaultDirection : `From now on, I will give you code snippets, then
-  - paragraph 1: explain what it does in short yet concise technical explanation
-  - paragraph 2: same thing but using real-world analogy in happy tones with emojis
+- paragraph 1: explain what it does in short yet concise technical explanation
+- paragraph 2: same thing but using real-world analogy in happy tones with emojis
 
-  Do not start unless I say so`
+Do not start unless I say so`
 );
-  const [question, setQuestion] = useState("Hello, I am a human.");
+  const [question, setQuestion] = useState(`def main():
+    pass
+  `);
   const [answer, setAnswer] = useState("...");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -182,7 +184,7 @@ export default function App({
               The Code
             </span>
             <textarea
-              className="resize-none h-56 xl:h-24 w-full px-5 py-2 font-medium border border-b-4 border-r-4 border-black rounded-lg shadow-lg hover:shadow-sm"
+              className="resize-none font-mono h-56 xl:h-24 w-full px-5 py-2 font-medium border border-b-4 border-r-4 border-black rounded-lg shadow-lg hover:shadow-sm"
               name="user"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
