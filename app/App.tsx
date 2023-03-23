@@ -124,7 +124,7 @@ export default function App({
       <div className="flex flex-col xl:flex-row xl:flex-wrap">
         <div className="basis-full">
           <h1 className="text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            ChatGPT Toolbox
+            Code Explainer
           </h1>
         </div>
         <div className="basis-full xl:basis-1/2 xl:pr-2">
