@@ -32,6 +32,11 @@ export default function App({
 - paragraph 1: explain what it does in short yet concise technical explanation
 - paragraph 2: same thing but using real-world analogy in happy tones with emojis
 
+Also
+- Use bullet points
+- Between paragraph, there shall be two <br>s
+- Answer in Simplified Chinese (be native)
+
 Do not start unless I say so`
 );
   const [question, setQuestion] = useState(`def main():
