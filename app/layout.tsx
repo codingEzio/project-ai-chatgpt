@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "ChatGPT Toolbox",
-  description: "The ChatGPT that can store your prompts.",
+  title: "Code Explainer",
+  description: "No more shitty code, I could read it all",
 };
 
 export default function RootLayout({
