@@ -28,8 +28,12 @@ export default function App({
   const [apiKey, setApiKey] = useState("");
   const [maxTokens, setMaxTokens] = useState("2048");
   const [direction, setDirection] = useState(
-    defaultDirection ? defaultDirection : "You are gpt 3.5"
-  );
+  defaultDirection ? defaultDirection : `From now on, I will give you code snippets, then
+  - paragraph 1: explain what it does in short yet concise technical explanation
+  - paragraph 2: same thing but using real-world analogy in happy tones with emojis
+
+  Do not start unless I say so`
+);
   const [question, setQuestion] = useState("Hello, I am a human.");
   const [answer, setAnswer] = useState("...");
 
@@ -132,7 +136,7 @@ export default function App({
             <div className="basis-full">
               <label>
                 <span className="text-xs font-semibold inline-block py-1 px-2 my-2 uppercase rounded text-teal-600 bg-teal-200 last:mr-0 mr-1">
-                  API_KEY
+                  OpenAI API Key
                 </span>
                 <input
                   className="resize-none h-8 xl:h-12 w-full px-5 py-2 font-medium border border-b-4 border-r-4 border-black rounded-lg shadow-lg hover:shadow-sm"
@@ -161,11 +165,11 @@ export default function App({
         </div>
         <div className="basis-full xl:basis-1/2  xl:pl-2">
           <label>
-            <span className="text-xs font-semibold inline-block py-1 px-2 my-2 uppercase rounded text-red-600 bg-red-200 last:mr-0 mr-1">
-              System
+            <span className="text-xs font-semibold italic inline-block py-1 px-2 my-2 uppercase rounded text-red-600 bg-red-200 last:mr-0 mr-1">
+              The Magic
             </span>
             <textarea
-              className="resize-none h-12 w-full px-5 py-2 font-medium border border-b-4 border-r-4 border-black rounded-lg shadow-lg hover:shadow-sm"
+              className="resize-vertical h-12 w-full px-5 py-2 font-medium border border-b-4 border-r-4 border-black rounded-lg shadow-lg hover:shadow-sm"
               name="system"
               value={direction}
               onChange={(e) => setDirection(e.target.value)}
@@ -174,8 +178,8 @@ export default function App({
         </div>
         <div className="basis-full">
           <label>
-            <span className="text-xs font-semibold inline-block py-1 px-2 my-2 uppercase rounded text-blue-600 bg-blue-200 last:mr-0 mr-1">
-              User
+            <span className="text-xs font-semibold italic inline-block py-1 px-2 my-2 uppercase rounded text-blue-600 bg-blue-200 last:mr-0 mr-1">
+              The Code
             </span>
             <textarea
               className="resize-none h-56 xl:h-24 w-full px-5 py-2 font-medium border border-b-4 border-r-4 border-black rounded-lg shadow-lg hover:shadow-sm"
