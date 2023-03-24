@@ -1,6 +1,14 @@
 ## Introduction
 
-- An user-Friendly web interface for *ChatGPT*.
+### What Is This Project For
+
+#### Optimistically Speaking
+
+> Built for doing one thing and only
+
+#### Pessimistically Speaking
+
+> A fucking simple wrapper for the OpenAI APIs with good-ish UIs
 
 ### Tech Stack
 
@@ -26,7 +34,10 @@
 ### Planned
 
 - [ ] Make two requests in order to get both the Chinese and the English answers
+    > Rationale: sometimes the English version were much easier to understand
+
 - [ ] Properly render the line feed and bullet points in the original response
+    > Rationale: just like when you were using the web version of ChatGPT
 
 ### Existing Ones
 
